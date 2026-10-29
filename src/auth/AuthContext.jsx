@@ -73,7 +73,7 @@ export function AuthProvider({ children }) {
     if (auth) await signOut(auth);
     const session = role === "admin"
       ? { uid: "demo-admin", displayName: "Campus Administrator", email: "admin@smartcampus.demo", role, isDemo: true }
-      : { uid: "demo-student", displayName: "Bhavana", email: "student@smartcampus.demo", role, isDemo: true };
+      : { uid: "demo-student", displayName: "User", email: "student@smartcampus.demo", role, isDemo: true };
     saveDemoSession(session);
     setDemoSession(session);
     setUser(session);
